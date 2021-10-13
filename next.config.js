@@ -1,3 +1,12 @@
 module.exports = {
-  reactStrictMode: true,
-}
+  images: {
+    domains: [
+      "leadership.ng",
+      "images.unsplash.com",
+      "platform-lookaside.fbsbx.com",
+      "firebasestorage.googleapis.com",
+    ],
+  },
+};
+   
+
