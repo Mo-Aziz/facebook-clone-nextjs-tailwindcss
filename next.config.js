@@ -1,7 +1,7 @@
 module.exports = {
   images: {
     domains: [
-      "leadership.ng",
+      "cdn.filestackcontent.com",
       "images.unsplash.com",
       "platform-lookaside.fbsbx.com",
       "firebasestorage.googleapis.com",

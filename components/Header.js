@@ -14,14 +14,19 @@ import {
   ShoppingCartIcon,
 } from "@heroicons/react/outline";
 import HeaderIcon from "./HeaderIcon";
+ 
+import { useSession, signOut } from "next-auth/client";
 
 function Header() {
+  const [session] = useSession();
+
+
   return (
     <div className="sticky top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md">
       {/* left section */}
       <div className="flex items-center">
         <Image
-          src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
+          src="https://cdn.filestackcontent.com/uzy4J70HTTW3BPSA5eKb"
           width={60}
           height={60}
           layout="fixed"
@@ -30,16 +35,16 @@ function Header() {
         <div className="flex items-center ml-2 rounded-full bg-gray-100 p-2">
           <SearchIcon className="h-6 text-gray-600" />
           <input
+            className="hidden md:inline-flex  ml-2 items-center bg-transparent outline-none placeholder-gray-500 flex-shrink"
             type="text"
             placeholder=" Search Facebook"
-            className="flex ml-2 items-center bg-transparent outline-none placeholder-gray-500 flex-shrink"
           />
         </div>
       </div>
       {/* center section */}
       <div className="flex justify-center flex-grow">
         <div className="flex space-x-2 md:space-x-6">
-          <HeaderIcon  active Icon={HomeIcon} />
+          <HeaderIcon active Icon={HomeIcon} />
           <HeaderIcon Icon={FlagIcon} />
           <HeaderIcon Icon={PlayIcon} />
           <HeaderIcon Icon={ShoppingCartIcon} />
@@ -47,7 +52,22 @@ function Header() {
         </div>
       </div>
       {/* right section */}
-      <div></div>
+      <div className="flex items-center sm:space-x-2 justify-end">
+        {/* profile image */}
+        <Image
+          onClick={signOut}
+          className="rounded-full cursor-pointer"
+          src={session.user.image}
+          width={40}
+          height={40}
+          layout="fixed"
+        />
+        <p className="whitespace-nowrap font-semibold pr-3">Maxmilian J</p>
+        <ViewGridIcon className="icon" />
+        <ChatIcon className="icon" />
+        <BellIcon className="icon" />
+        <ChevronDownIcon className="icon" />
+      </div>
     </div>
   );
 }
