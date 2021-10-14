@@ -11,7 +11,7 @@
 #### instant styling via tailwind utilities classes.
 #### Responsiveness via screen size break points
 #### Next Auth 
-#### Facebook Auth.
+#### Facebook Auth and login.
 #### components global styling.
 
 

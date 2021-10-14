@@ -2,13 +2,14 @@ import { getSession } from "next-auth/client";
 import Head from "next/head";
 import Header from "../components/Header";
 import Login from "../components/Login";
+import Sidebar from "../components/Sidebar";
 
 // import styles from '../styles/Home.module.css'
 
 export default function Home({ session }) {
   if (!session) return <Login />;
   return (
-    <div>
+    <div className="h-screen bg-gray-100 overflow-hidden">
       <Head>
         <title>Facebook Clone</title>
         <meta
@@ -17,12 +18,15 @@ export default function Home({ session }) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* Header */}
+
+      {/* the Header */}
       <Header/>
 
-      <main>
+      <main className="flex">
         {/* Sidebar -left section */}
+        <Sidebar/>
         {/* Feeds middle -section- */}
+        <Feed/>
         {/* widgets -right section- */}
       </main>
     </div>

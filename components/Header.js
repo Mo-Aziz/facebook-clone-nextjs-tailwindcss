@@ -58,11 +58,11 @@ function Header() {
           onClick={signOut}
           className="rounded-full cursor-pointer"
           src={session.user.image}
-          width={40}
-          height={40}
+          width={60}
+          height={60}
           layout="fixed"
         />
-        <p className="whitespace-nowrap font-semibold pr-3">Maxmilian J</p>
+        <p className="whitespace-nowrap font-semibold pr-3">{session.user.name}</p>
         <ViewGridIcon className="icon" />
         <ChatIcon className="icon" />
         <BellIcon className="icon" />
