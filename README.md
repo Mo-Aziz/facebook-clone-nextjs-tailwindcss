@@ -3,19 +3,26 @@
 #### Used libraries and frameworks.
 
 #### Next Js
-#### Tailwind CSS
-#### Heroicons
-#### 
 
-### *****Web App features*****
+#### Tailwind CSS
+
+#### Heroicons
+
+####
+
+### **\***Web App features**\***
+
 #### instant styling via tailwind utilities classes.
+
 #### Responsiveness via screen size break points
-#### Next Auth 
+
+#### Next Auth
+
 #### Facebook Auth and login.
+
 #### components global styling.
 
-
-
+#### firebasestorage.
 
 <!-- This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

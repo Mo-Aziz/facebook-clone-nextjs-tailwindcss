@@ -1,4 +1,5 @@
-import Stories from "./Stories"
+import InputBox from "./InputBox";
+import Stories from "./Stories";
 
 function Feed() {
   return (
@@ -7,10 +8,11 @@ function Feed() {
         {/* Stories */}
         <Stories />
         {/* InputBox */}
+        <InputBox />
         {/* Posts */}
       </div>
     </div>
   );
 }
 
-export default Feed
+export default Feed;
